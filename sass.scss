@@ -52,14 +52,50 @@ header {
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   h1 {
     margin: 25px auto;
   }
-  p {
+  .txtdepresentation {
+    margin: 0 auto;
   }
   .bouton {
     border: none;
+    width: 200px;
+    margin: 0 auto;
+    height: 50px;
+    color: white;
+    border-radius: 100px;
+    background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    font-weight: bold;
+  }
+}
+/*Filtres*/
+
+.filtres {
+  height: 300px;
+  .choix {
+    width: 85%;
+    height: 75px;
+    box-shadow: 1px 1px 20px 1px rgba(70, 70, 70, 0.3);
+    margin: 20px auto;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #f6f6f6;
+    i {
+      color: #7e7e7e;
+      margin: 30px;
+      &:hover {
+        .choix {
+          background-color: #f5edff;
+        }
+
+        i {
+          color: $couleurprim;
+        }
+      }
+    }
   }
 }
 
@@ -101,7 +137,7 @@ footer {
   background-color: #353535;
   display: flex;
   flex-direction: column;
-  height: 197px;
+  height: 140px;
   padding: 30px;
   a {
     color: white;

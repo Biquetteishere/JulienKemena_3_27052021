@@ -72,17 +72,61 @@ header .entete .logo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .presentation h1 {
   margin: 25px auto;
 }
 
+.presentation .txtdepresentation {
+  margin: 0 auto;
+}
+
 .presentation .bouton {
   border: none;
+  width: 200px;
+  margin: 0 auto;
+  height: 50px;
+  color: white;
+  border-radius: 100px;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#9356dc), color-stop(#b35cdc), color-stop(#cf64dc), color-stop(#e86edb), to(#ff79da));
+  background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  font-weight: bold;
+}
+
+/*Filtres*/
+.filtres {
+  height: 300px;
+}
+
+.filtres .choix {
+  width: 85%;
+  height: 75px;
+  -webkit-box-shadow: 1px 1px 20px 1px rgba(70, 70, 70, 0.3);
+          box-shadow: 1px 1px 20px 1px rgba(70, 70, 70, 0.3);
+  margin: 20px auto;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  background-color: #f6f6f6;
+}
+
+.filtres .choix i {
+  color: #7e7e7e;
+  margin: 30px;
+}
+
+.filtres .choix i:hover .choix {
+  background-color: #f5edff;
+}
+
+.filtres .choix i:hover i {
+  color: #9356dc;
 }
 
 .img1 {
@@ -135,7 +179,7 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 197px;
+  height: 140px;
   padding: 30px;
 }
 
