@@ -78,7 +78,7 @@ header {
   .choix {
     width: 85%;
     height: 75px;
-    box-shadow: 1px 1px 20px 1px rgba(70, 70, 70, 0.3);
+    box-shadow: 1px 1px 15px 1px rgba(70, 70, 70, 0.3);
     margin: 20px auto;
     border-radius: 20px;
     display: flex;
@@ -132,18 +132,56 @@ header {
       margin: 30px;
       font-size: 18px;
     }
+    &:hover {
+      background-color: #f5edff;
+      i {
+        color: $couleurprim;
+      }
+    }
   }
-}
-.choix i:hover {
-  color: $couleurprim;
 }
 
 /*Restaurants*/
 
 .restaurant {
   background-color: #f6f6f6;
+  padding: $padding;
   .menuresto {
-    padding-bottom: 30px;
+    padding-bottom: 9px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 1px 1px 15px 1px rgba(70, 70, 70, 0.3);
+    position: relative;
+    margin: 20px;
+
+    .descriptionimg {
+      display: flex;
+      flex-direction: column;
+      margin: 13px;
+      .nomspalette {
+        font-weight: bold;
+        margin-bottom: 3px;
+      }
+    }
+    .iconcoeur {
+      position: absolute;
+      right: 35px;
+      bottom: 30px;
+      &:hover {
+        animation: 3s 0s 1 both coeur;
+
+        @keyframes coeur {
+          from {
+            bottom: 0px;
+            color: #fff;
+          }
+          to {
+            top: 0px;
+            color: $couleurprim;
+          }
+        }
+      }
+    }
     .img1 {
       width: 100%;
       height: 150px;
