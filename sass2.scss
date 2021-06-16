@@ -30,6 +30,26 @@ header {
     }
   }
 }
+/*image*/
+.img {
+  object-fit: cover;
+  width: 100%;
+  margin-top: 81px;
+}
+/*page menu (section)*/
+section {
+  background-color: #f6f6f6;
+  .bouton {
+    border: none;
+    width: 200px;
+    margin: 30px auto;
+    height: 50px;
+    color: white;
+    border-radius: 100px;
+    background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    font-weight: bold;
+  }
+}
 /*Footer*/
 footer {
   background-color: #353535;

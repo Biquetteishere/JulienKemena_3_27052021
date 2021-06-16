@@ -33,6 +33,31 @@ header .entete .logo {
   display: block;
 }
 
+/*image*/
+.img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  margin-top: 81px;
+}
+
+/*page menu (section)*/
+section {
+  background-color: #f6f6f6;
+}
+
+section .bouton {
+  border: none;
+  width: 200px;
+  margin: 30px auto;
+  height: 50px;
+  color: white;
+  border-radius: 100px;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(#9356dc), color-stop(#b35cdc), color-stop(#cf64dc), color-stop(#e86edb), to(#ff79da));
+  background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  font-weight: bold;
+}
+
 /*Footer*/
 footer {
   background-color: #353535;
