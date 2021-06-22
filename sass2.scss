@@ -7,6 +7,9 @@ $padding: 15px;
   list-style: none;
   text-decoration: none;
 }
+a {
+  color: black;
+}
 
 body {
   margin: 0 auto;
@@ -25,6 +28,12 @@ header {
     display: flex;
     justify-content: center;
     padding: 22px;
+    .arrow {
+      position: absolute;
+      left: 21px;
+      bottom: 27px;
+      font-size: 25px;
+    }
     .logo {
       display: block;
     }
@@ -39,6 +48,80 @@ header {
 /*page menu (section)*/
 section {
   background-color: #f6f6f6;
+  margin-top: -40px;
+  overflow-x: overlay;
+  border-radius: 35px;
+  .titremenu {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 40px;
+    align-items: center;
+    i {
+      font-size: 23px;
+    }
+  }
+  .entree {
+    h2 {
+      font-weight: 300;
+      font-size: 18px;
+      margin-left: 26px;
+      margin-bottom: 4px;
+    }
+  }
+  .underline-entree {
+    background-color: #99e2d0;
+    height: 3px;
+    width: 47px;
+    margin-left: 26px;
+  }
+  .plat {
+    h2 {
+      font-weight: 300;
+      font-size: 18px;
+      margin-left: 26px;
+      margin-bottom: 4px;
+    }
+  }
+  .underline-plat {
+    background-color: #99e2d0;
+    height: 3px;
+    width: 47px;
+    margin-left: 26px;
+  }
+  .dessert {
+    h2 {
+      font-weight: 300;
+      font-size: 18px;
+      margin-left: 26px;
+      margin-bottom: 4px;
+    }
+  }
+  .underline-dessert {
+    background-color: #99e2d0;
+    height: 3px;
+    width: 47px;
+    margin-left: 26px;
+  }
+  .choixmenu {
+    border-radius: 15px;
+    box-shadow: 1px 1px 17px 4px #e4dfdf;
+    width: 90%;
+    justify-content: center;
+    margin: 20px auto;
+    height: 70px;
+  }
+  .titlemenu {
+    padding: 10px;
+    font-weight: bold;
+  }
+  .descriptionmenu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+  }
+  .price {
+    font-weight: bold;
+  }
   .bouton {
     border: none;
     width: 200px;
@@ -48,6 +131,8 @@ section {
     border-radius: 100px;
     background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
     font-weight: bold;
+    cursor: pointer;
+    display: block;
   }
 }
 /*Footer*/

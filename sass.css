@@ -4,6 +4,10 @@
   text-decoration: none;
 }
 
+a {
+  color: black;
+}
+
 body {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
@@ -71,11 +75,12 @@ header .entete .logo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .presentation h1 {
   margin: 0 auto;
+  padding: 20px 70px;
 }
 
 .presentation .txtdepresentation {
@@ -86,13 +91,14 @@ header .entete .logo {
 .presentation .bouton {
   border: none;
   width: 200px;
-  margin: 30px auto;
+  margin: 50px auto;
   height: 50px;
   color: white;
   border-radius: 100px;
   background-image: -webkit-gradient(linear, right bottom, left top, from(#9356dc), color-stop(#b35cdc), color-stop(#cf64dc), color-stop(#e86edb), to(#ff79da));
   background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   font-weight: bold;
+  cursor: pointer;
 }
 
 /*Filtres*/
@@ -122,47 +128,7 @@ header .entete .logo {
   position: relative;
 }
 
-.filtres .choix .number1 {
-  position: absolute;
-  left: -12px;
-  background-color: #9356dc;
-  font-weight: 400;
-  color: white;
-  width: 25px;
-  height: 25px;
-  border-radius: 50px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.filtres .choix .number2 {
-  position: absolute;
-  left: -12px;
-  background-color: #9356dc;
-  font-weight: 400;
-  color: white;
-  width: 25px;
-  height: 25px;
-  border-radius: 50px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.filtres .choix .number3 {
+.filtres .choix .number {
   position: absolute;
   left: -12px;
   background-color: #9356dc;
@@ -234,31 +200,11 @@ header .entete .logo {
   bottom: 30px;
 }
 
-.restaurant .menuresto .iconcoeur:hover {
-  -webkit-animation: 3s 0s 1 both coeur;
-          animation: 3s 0s 1 both coeur;
-}
-
-@-webkit-keyframes coeur {
-  from {
-    bottom: 0px;
-    color: #fff;
-  }
-  to {
-    top: 0px;
-    color: #9356dc;
-  }
-}
-
-@keyframes coeur {
-  from {
-    bottom: 0px;
-    color: #fff;
-  }
-  to {
-    top: 0px;
-    color: #9356dc;
-  }
+.restaurant .menuresto .fas {
+  position: absolute;
+  right: 35px;
+  bottom: 32px;
+  color: gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
 }
 
 .restaurant .menuresto .img1 {

@@ -3,6 +3,10 @@
   text-decoration: none;
 }
 
+a {
+  color: black;
+}
+
 body {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
@@ -29,6 +33,13 @@ header .entete {
   padding: 22px;
 }
 
+header .entete .arrow {
+  position: absolute;
+  left: 21px;
+  bottom: 27px;
+  font-size: 25px;
+}
+
 header .entete .logo {
   display: block;
 }
@@ -44,6 +55,99 @@ header .entete .logo {
 /*page menu (section)*/
 section {
   background-color: #f6f6f6;
+  margin-top: -40px;
+  overflow-x: overlay;
+  border-radius: 35px;
+}
+
+section .titremenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 5px 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .titremenu i {
+  font-size: 23px;
+}
+
+section .entree h2 {
+  font-weight: 300;
+  font-size: 18px;
+  margin-left: 26px;
+  margin-bottom: 4px;
+}
+
+section .underline-entree {
+  background-color: #99e2d0;
+  height: 3px;
+  width: 47px;
+  margin-left: 26px;
+}
+
+section .plat h2 {
+  font-weight: 300;
+  font-size: 18px;
+  margin-left: 26px;
+  margin-bottom: 4px;
+}
+
+section .underline-plat {
+  background-color: #99e2d0;
+  height: 3px;
+  width: 47px;
+  margin-left: 26px;
+}
+
+section .dessert h2 {
+  font-weight: 300;
+  font-size: 18px;
+  margin-left: 26px;
+  margin-bottom: 4px;
+}
+
+section .underline-dessert {
+  background-color: #99e2d0;
+  height: 3px;
+  width: 47px;
+  margin-left: 26px;
+}
+
+section .choixmenu {
+  border-radius: 15px;
+  -webkit-box-shadow: 1px 1px 17px 4px #e4dfdf;
+          box-shadow: 1px 1px 17px 4px #e4dfdf;
+  width: 90%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px auto;
+  height: 70px;
+}
+
+section .titlemenu {
+  padding: 10px;
+  font-weight: bold;
+}
+
+section .descriptionmenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 10px;
+}
+
+section .price {
+  font-weight: bold;
 }
 
 section .bouton {
@@ -56,6 +160,8 @@ section .bouton {
   background-image: -webkit-gradient(linear, right bottom, left top, from(#9356dc), color-stop(#b35cdc), color-stop(#cf64dc), color-stop(#e86edb), to(#ff79da));
   background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   font-weight: bold;
+  cursor: pointer;
+  display: block;
 }
 
 /*Footer*/
