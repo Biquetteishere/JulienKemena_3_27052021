@@ -14,6 +14,63 @@ body {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
 }
+/* LOADER */
+.loader{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background:rgb(0,0,0);
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: 3s 0s 1 both loader;
+  @keyframes loader {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  .chargement{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: solid 8px rgb(221, 211, 211);
+    border-left:solid #fff;
+    animation: 1s 0s infinite both chargement;
+    @keyframes chargement {
+      from{
+        transform: rotate(0deg);
+      }
+      to{
+        transform: rotate(360deg);
+    
+      }
+    }
+  }
+
+}
+ /*@keyframes loader {
+   from{
+     opacity: 0;
+   }
+   to{
+     opacity: 1;
+   }
+ }
+@keyframes chargement {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+
+  }
+}*/
 /*Entete*/
 header {
   width: 100%;
@@ -92,6 +149,7 @@ header {
     font-weight: bold;
     background-color: #f6f6f6;
     position: relative;
+    cursor: pointer;
 
     .number {
       position: absolute;
