@@ -20,7 +20,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background:rgb(0,0,0);
+  background:rgb(0, 0, 0);
   position: fixed;
   z-index: 999;
   display: flex;
@@ -29,10 +29,12 @@ body {
   animation: 3s 0s 1 both loader;
   @keyframes loader {
     from{
-      opacity: 0;
+      opacity: 
+      display: flex;
     }
     to{
-      opacity: 1;
+      opacity:
+      display: none;
     }
   }
   .chargement{
@@ -40,8 +42,8 @@ body {
     width: 100px;
     border-radius: 50%;
     border: solid 8px rgb(221, 211, 211);
-    border-left:solid #fff;
-    animation: 1s 0s infinite both chargement;
+    border-left:solid 8px #fff;
+    animation: 1s 0s 3 both chargement;
     @keyframes chargement {
       from{
         transform: rotate(0deg);
