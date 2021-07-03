@@ -24,6 +24,7 @@ header {
   box-shadow: 0px 4px 8px 0px grey;
   position: fixed;
   top: 0px;
+  z-index: 99;
   .entete {
     display: flex;
     justify-content: center;
@@ -39,6 +40,7 @@ header {
     }
   }
 }
+
 /*image*/
 .img {
   object-fit: cover;
@@ -109,7 +111,52 @@ section {
     justify-content: center;
     margin: 20px auto;
     height: 70px;
+    position: relative;
+    &:hover{
+    .animationvalider{
+        animation: 1s 1s 1 both check;
+        @keyframes check {
+          from{
+            width: 0%;
+          }
+          to{
+            width: 27%;
+          }
+        }
+      }
+    }
+    animation: 1s 1s 1 both annimenu;
+    @keyframes annimenu {
+      from{
+        opacity: 0;
+        margin-top: 30px;
+      }
+      to{
+        opacity: 1;
+        margin: 20px auto;
+      }
+    }
+    
+    .animationvalider{
+      display: flex;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      overflow: hidden;
+      width: 0%;
+      height: 70px;
+      background-color: green;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0 15px 15px 0;
+    }
   }
+  @for $i from 1 through 9 {
+    .choixmenu#{$i} {
+      animation-delay:$i*0.15s;
+    }
+  }
+  
   .titlemenu {
     padding: 10px;
     font-weight: bold;

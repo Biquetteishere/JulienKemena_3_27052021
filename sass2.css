@@ -21,6 +21,7 @@ header {
           box-shadow: 0px 4px 8px 0px grey;
   position: fixed;
   top: 0px;
+  z-index: 99;
 }
 
 header .entete {
@@ -129,6 +130,119 @@ section .choixmenu {
           justify-content: center;
   margin: 20px auto;
   height: 70px;
+  position: relative;
+  -webkit-animation: 1s 1s 1 both annimenu;
+          animation: 1s 1s 1 both annimenu;
+}
+
+section .choixmenu:hover .animationvalider {
+  -webkit-animation: 1s 1s 1 both check;
+          animation: 1s 1s 1 both check;
+}
+
+@-webkit-keyframes check {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 27%;
+  }
+}
+
+@keyframes check {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 27%;
+  }
+}
+
+@-webkit-keyframes annimenu {
+  from {
+    opacity: 0;
+    margin-top: 30px;
+  }
+  to {
+    opacity: 1;
+    margin: 20px auto;
+  }
+}
+
+@keyframes annimenu {
+  from {
+    opacity: 0;
+    margin-top: 30px;
+  }
+  to {
+    opacity: 1;
+    margin: 20px auto;
+  }
+}
+
+section .choixmenu .animationvalider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  overflow: hidden;
+  width: 0%;
+  height: 70px;
+  background-color: green;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0 15px 15px 0;
+}
+
+section .choixmenu1 {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+
+section .choixmenu2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+section .choixmenu3 {
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+
+section .choixmenu4 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+section .choixmenu5 {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+section .choixmenu6 {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+section .choixmenu7 {
+  -webkit-animation-delay: 1.05s;
+          animation-delay: 1.05s;
+}
+
+section .choixmenu8 {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+section .choixmenu9 {
+  -webkit-animation-delay: 1.35s;
+          animation-delay: 1.35s;
 }
 
 section .titlemenu {

@@ -37,23 +37,23 @@ body {
 
 @-webkit-keyframes loader {
   from {
+    z-index: 999;
     opacity: 1;
-    display: block;
   }
   to {
+    z-index: -10;
     opacity: 0;
-    display: none;
   }
 }
 
 @keyframes loader {
   from {
+    z-index: 999;
     opacity: 1;
-    display: block;
   }
   to {
+    z-index: -10;
     opacity: 0;
-    display: none;
   }
 }
 
@@ -62,9 +62,9 @@ body {
   width: 100px;
   border-radius: 50%;
   border: solid 8px #ddd3d3;
-  border-left: solid 8px #fff;
-  -webkit-animation: 1s 0s 3 both chargement;
-          animation: 1s 0s 3 both chargement;
+  border-left: solid 8px #ff79fa;
+  -webkit-animation: 1s 0s 10 both chargement;
+          animation: 1s 0s 10 both chargement;
 }
 
 @-webkit-keyframes chargement {
