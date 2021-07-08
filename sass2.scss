@@ -42,24 +42,62 @@ header {
 }
 
 /*image*/
+.bgimg{
+  width: 100%;
+    height: 393PX;
+}
 .img {
   object-fit: cover;
-  width: 100%;
-  margin-top: 81px;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    margin-top: 81px;
 }
 /*page menu (section)*/
 section {
   background-color: #f6f6f6;
   margin-top: -40px;
   overflow-x: overlay;
-  border-radius: 35px;
+  border-radius: 35px 35px 0px 0px;
   .titremenu {
     display: flex;
     justify-content: space-between;
     margin: 5px 40px;
     align-items: center;
-    i {
+    position: relative;
+    .iconcoeur {
+      position: absolute;
+      right: -15px;
+      width: 50px;
+      height: 25px;
       font-size: 23px;
+      .fas {
+        opacity: 0;
+        transition: all 0.2 linear;
+        background: linear-gradient(180deg, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transform: scale(0.82);
+        &:hover {
+          opacity: 1;
+          animation: 0.8s 0s 1 both transition;
+          @keyframes transition {
+            from{
+              opacity: 0;
+            to{
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+      .iconcoeur .fas,
+    .iconcoeur .far {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
     }
   }
   .entree {
@@ -114,13 +152,24 @@ section {
     position: relative;
     &:hover{
     .animationvalider{
-        animation: 1s 1s 1 both check;
+        animation: 1s 0s 1 both check;
         @keyframes check {
           from{
             width: 0%;
           }
           to{
             width: 27%;
+          }
+        }
+        .fas{
+          animation: 1s 0s 1 both rotationcheck;
+          @keyframes rotationcheck {
+            from{
+              transform: rotate(0deg);
+            }
+            to{
+              transform: rotate(360deg);
+            }
           }
         }
       }
@@ -145,7 +194,7 @@ section {
       overflow: hidden;
       width: 0%;
       height: 70px;
-      background-color: green;
+      background-color: $couleurter;
       justify-content: center;
       align-items: center;
       border-radius: 0 15px 15px 0;
@@ -156,7 +205,9 @@ section {
       animation-delay:$i*0.15s;
     }
   }
-  
+  .test{
+    width: 100%;
+  }
   .titlemenu {
     padding: 10px;
     font-weight: bold;
@@ -165,6 +216,7 @@ section {
     display: flex;
     justify-content: space-between;
     padding: 0px 10px;
+    text-overflow: ellipsis;
   }
   .price {
     font-weight: bold;
@@ -199,5 +251,13 @@ footer {
     i {
       margin-right: 10px;
     }
+  }
+}
+
+
+@media screen and (max-width: 1920px){
+  section{
+    max-width: 1137px;
+    margin: 0 auto;
   }
 }

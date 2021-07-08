@@ -58,23 +58,6 @@ body {
   }
 
 }
- /*@keyframes loader {
-   from{
-     opacity: 0;
-   }
-   to{
-     opacity: 1;
-   }
- }
-@keyframes chargement {
-  from{
-    transform: rotate(0deg);
-  }
-  to{
-    transform: rotate(360deg);
-
-  }
-}*/
 /*Entete*/
 header {
   width: 100%;
@@ -139,7 +122,7 @@ header {
 
 .filtres {
   height: 405px;
-  h1 {
+  h2 {
     margin: 30px;
   }
   .choix {
@@ -187,7 +170,10 @@ header {
 
 .restaurant {
   background-color: #f6f6f6;
-  padding: $padding;
+  h2{
+    margin: 15px 20px;
+    padding-top: 63px;
+  }
   .menuresto {
     padding-bottom: 9px;
     background-color: white;
@@ -221,6 +207,15 @@ header {
         transform: scale(0.82);
         &:hover {
           opacity: 1;
+          animation: 0.8s 0s 1 both transition;
+          @keyframes transition {
+            from{
+              opacity: 0;
+            to{
+                opacity: 1;
+              }
+            }
+          }
         }
       }
     }
@@ -285,3 +280,12 @@ footer {
     }
   }
 }
+
+
+/*Resposnsive*/
+
+  
+@media screen and (min-width: px){
+
+}
+

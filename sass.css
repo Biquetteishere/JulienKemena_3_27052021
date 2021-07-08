@@ -89,23 +89,6 @@ body {
   }
 }
 
-/*@keyframes loader {
-   from{
-     opacity: 0;
-   }
-   to{
-     opacity: 1;
-   }
- }
-@keyframes chargement {
-  from{
-    transform: rotate(0deg);
-  }
-  to{
-    transform: rotate(360deg);
-
-  }
-}*/
 /*Entete*/
 header {
   width: 100%;
@@ -199,7 +182,7 @@ header .entete .logo {
   height: 405px;
 }
 
-.filtres h1 {
+.filtres h2 {
   margin: 30px;
 }
 
@@ -259,7 +242,11 @@ header .entete .logo {
 /*Restaurants*/
 .restaurant {
   background-color: #f6f6f6;
-  padding: 15px;
+}
+
+.restaurant h2 {
+  margin: 15px 20px;
+  padding-top: 63px;
 }
 
 .restaurant .menuresto {
@@ -311,6 +298,26 @@ header .entete .logo {
 
 .restaurant .menuresto .iconcoeur .fas:hover {
   opacity: 1;
+  -webkit-animation: 0.8s 0s 1 both transition;
+          animation: 0.8s 0s 1 both transition;
+}
+
+@-webkit-keyframes transition {
+  from {
+    opacity: 0;
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes transition {
+  from {
+    opacity: 0;
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 .restaurant .menuresto .iconcoeur .fas,
@@ -387,4 +394,6 @@ footer a .footerOMF {
 footer a i {
   margin-right: 10px;
 }
+
+/*Resposnsive*/
 /*# sourceMappingURL=sass.css.map */

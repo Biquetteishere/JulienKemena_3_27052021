@@ -46,10 +46,17 @@ header .entete .logo {
 }
 
 /*image*/
+.bgimg {
+  width: 100%;
+  height: 393PX;
+}
+
 .img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  position: fixed;
+  z-index: -1;
   margin-top: 81px;
 }
 
@@ -58,7 +65,7 @@ section {
   background-color: #f6f6f6;
   margin-top: -40px;
   overflow-x: overlay;
-  border-radius: 35px;
+  border-radius: 35px 35px 0px 0px;
 }
 
 section .titremenu {
@@ -72,10 +79,59 @@ section .titremenu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
-section .titremenu i {
+section .titremenu .iconcoeur {
+  position: absolute;
+  right: -15px;
+  width: 50px;
+  height: 25px;
   font-size: 23px;
+}
+
+section .titremenu .iconcoeur .fas {
+  opacity: 0;
+  -webkit-transition: all 0.2 linear;
+  transition: all 0.2 linear;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-transform: scale(0.82);
+          transform: scale(0.82);
+}
+
+section .titremenu .iconcoeur .fas:hover {
+  opacity: 1;
+  -webkit-animation: 0.8s 0s 1 both transition;
+          animation: 0.8s 0s 1 both transition;
+}
+
+@-webkit-keyframes transition {
+  from {
+    opacity: 0;
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes transition {
+  from {
+    opacity: 0;
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+section .titremenu .iconcoeur .iconcoeur .fas,
+section .titremenu .iconcoeur .iconcoeur .far {
+  position: absolute;
+  right: 0px;
+  top: 0px;
 }
 
 section .entree h2 {
@@ -136,8 +192,8 @@ section .choixmenu {
 }
 
 section .choixmenu:hover .animationvalider {
-  -webkit-animation: 1s 1s 1 both check;
-          animation: 1s 1s 1 both check;
+  -webkit-animation: 1s 0s 1 both check;
+          animation: 1s 0s 1 both check;
 }
 
 @-webkit-keyframes check {
@@ -155,6 +211,33 @@ section .choixmenu:hover .animationvalider {
   }
   to {
     width: 27%;
+  }
+}
+
+section .choixmenu:hover .animationvalider .fas {
+  -webkit-animation: 1s 0s 1 both rotationcheck;
+          animation: 1s 0s 1 both rotationcheck;
+}
+
+@-webkit-keyframes rotationcheck {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotationcheck {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -190,7 +273,7 @@ section .choixmenu .animationvalider {
   overflow: hidden;
   width: 0%;
   height: 70px;
-  background-color: green;
+  background-color: #99e2d0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -245,6 +328,10 @@ section .choixmenu9 {
           animation-delay: 1.35s;
 }
 
+section .test {
+  width: 100%;
+}
+
 section .titlemenu {
   padding: 10px;
   font-weight: bold;
@@ -258,6 +345,7 @@ section .descriptionmenu {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0px 10px;
+  text-overflow: ellipsis;
 }
 
 section .price {
@@ -304,5 +392,12 @@ footer a .footerOMF {
 
 footer a i {
   margin-right: 10px;
+}
+
+@media screen and (max-width: 1920px) {
+  section {
+    max-width: 1137px;
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=sass2.css.map */
