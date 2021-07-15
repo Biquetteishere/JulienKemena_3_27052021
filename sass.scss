@@ -15,12 +15,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 /* LOADER */
-.loader{
+.loader {
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background:rgb(0, 0, 0);
+  background: rgb(0, 0, 0);
   position: fixed;
   z-index: 999;
   display: flex;
@@ -28,35 +28,31 @@ body {
   align-items: center;
   animation: 3s 0s 1 both loader;
   @keyframes loader {
-    from{
+    from {
       z-index: 999;
       opacity: 1;
-      
     }
-    to{
+    to {
       z-index: -10;
       opacity: 0;
-      
     }
   }
-  .chargement{
+  .chargement {
     height: 100px;
     width: 100px;
     border-radius: 50%;
     border: solid 8px rgb(221, 211, 211);
-    border-left:solid 8px #ff79fa;
+    border-left: solid 8px #ff79fa;
     animation: 1s 0s 10 both chargement;
     @keyframes chargement {
-      from{
+      from {
         transform: rotate(0deg);
       }
-      to{
+      to {
         transform: rotate(360deg);
-    
       }
     }
   }
-
 }
 /*Entete*/
 header {
@@ -170,10 +166,11 @@ header {
 
 .restaurant {
   background-color: #f6f6f6;
-  h2{
+  h2 {
     margin: 15px 20px;
     padding-top: 63px;
   }
+
   .menuresto {
     padding-bottom: 9px;
     background-color: white;
@@ -209,9 +206,9 @@ header {
           opacity: 1;
           animation: 0.8s 0s 1 both transition;
           @keyframes transition {
-            from{
+            from {
               opacity: 0;
-            to{
+              to {
                 opacity: 1;
               }
             }
@@ -224,6 +221,7 @@ header {
       position: absolute;
       right: 0;
       bottom: 0;
+      font-size: 25px;
     }
 
     .img1 {
@@ -281,11 +279,12 @@ footer {
   }
 }
 
-
 /*Resposnsive*/
 
-  
-@media screen and (min-width: px){
-
+@media screen and (min-width: 1000px) {
+  .menuresto {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
-

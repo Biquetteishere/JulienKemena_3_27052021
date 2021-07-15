@@ -48,7 +48,7 @@ header .entete .logo {
 /*image*/
 .bgimg {
   width: 100%;
-  height: 393PX;
+  height: 393px;
 }
 
 .img {
@@ -84,10 +84,10 @@ section .titremenu {
 
 section .titremenu .iconcoeur {
   position: absolute;
-  right: -15px;
+  right: 20px;
+  bottom: 30px;
   width: 50px;
   height: 25px;
-  font-size: 23px;
 }
 
 section .titremenu .iconcoeur .fas {
@@ -127,11 +127,12 @@ section .titremenu .iconcoeur .fas:hover {
   }
 }
 
-section .titremenu .iconcoeur .iconcoeur .fas,
-section .titremenu .iconcoeur .iconcoeur .far {
+section .titremenu .iconcoeur .fas,
+section .titremenu .iconcoeur .far {
   position: absolute;
-  right: 0px;
-  top: 0px;
+  right: 0;
+  bottom: 0;
+  font-size: 25px;
 }
 
 section .entree h2 {
@@ -181,12 +182,11 @@ section .choixmenu {
   -webkit-box-shadow: 1px 1px 17px 4px #e4dfdf;
           box-shadow: 1px 1px 17px 4px #e4dfdf;
   width: 90%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 20px auto;
   height: 70px;
-  position: relative;
   -webkit-animation: 1s 1s 1 both annimenu;
           animation: 1s 1s 1 both annimenu;
 }
@@ -267,9 +267,6 @@ section .choixmenu .animationvalider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  right: 0px;
-  top: 0px;
   overflow: hidden;
   width: 0%;
   height: 70px;
@@ -328,28 +325,22 @@ section .choixmenu9 {
           animation-delay: 1.35s;
 }
 
-section .test {
-  width: 100%;
-}
-
 section .titlemenu {
-  padding: 10px;
+  padding: 10px 0px;
   font-weight: bold;
 }
 
 section .descriptionmenu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 0px 10px;
   text-overflow: ellipsis;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 section .price {
   font-weight: bold;
+  margin: 37px 13px 0px 0px;
 }
 
 section .bouton {

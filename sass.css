@@ -325,6 +325,7 @@ header .entete .logo {
   position: absolute;
   right: 0;
   bottom: 0;
+  font-size: 25px;
 }
 
 .restaurant .menuresto .img1 {
@@ -396,4 +397,14 @@ footer a i {
 }
 
 /*Resposnsive*/
+@media screen and (min-width: 1000px) {
+  .menuresto {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 /*# sourceMappingURL=sass.css.map */
