@@ -406,5 +406,8 @@ footer a i {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .footer a {
+    margin: 5px auto;
+  }
 }
 /*# sourceMappingURL=sass.css.map */

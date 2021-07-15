@@ -201,7 +201,7 @@ section .choixmenu:hover .animationvalider {
     width: 0%;
   }
   to {
-    width: 27%;
+    width: 80px;
   }
 }
 
@@ -210,7 +210,7 @@ section .choixmenu:hover .animationvalider {
     width: 0%;
   }
   to {
-    width: 27%;
+    width: 80px;
   }
 }
 

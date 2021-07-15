@@ -287,4 +287,9 @@ footer {
     display: flex;
     flex-wrap: wrap;
   }
+  .footer {
+    a {
+      margin: 5px auto;
+    }
+  }
 }
