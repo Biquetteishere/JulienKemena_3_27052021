@@ -177,9 +177,18 @@ header .entete .logo {
   cursor: pointer;
 }
 
+.presentation .bouton:hover {
+  -webkit-box-shadow: 1px 1px 12px #aaaaaa;
+          box-shadow: 1px 1px 12px #aaaaaa;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 /*Filtres*/
 .filtres {
-  height: 405px;
+  height: 380px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .filtres h2 {
@@ -245,8 +254,13 @@ header .entete .logo {
 }
 
 .restaurant h2 {
-  margin: 15px 20px;
   padding-top: 63px;
+  max-width: 1160px;
+  margin: 15px auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 30px;
 }
 
 .restaurant .menuresto {
@@ -257,6 +271,33 @@ header .entete .logo {
           box-shadow: 1px 1px 15px 1px rgba(70, 70, 70, 0.3);
   position: relative;
   margin: 20px;
+}
+
+.restaurant .menuresto a {
+  display: block;
+}
+
+.restaurant .menuresto .nouveau {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #99e2d0;
+  padding: 5px 9px;
+  border-radius: 2px;
+  -webkit-animation: 1s 3s 5 both nouveau;
+          animation: 1s 3s 5 both nouveau;
+}
+
+@-webkit-keyframes nouveau {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes nouveau {
+  50% {
+    opacity: 0;
+  }
 }
 
 .restaurant .menuresto .descriptionimg {
@@ -285,12 +326,12 @@ header .entete .logo {
 
 .restaurant .menuresto .iconcoeur .fas {
   opacity: 0;
-  -webkit-transition: all 0.2 linear;
-  transition: all 0.2 linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  background-clip: text;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
   -webkit-transform: scale(0.82);
           transform: scale(0.82);
@@ -305,18 +346,18 @@ header .entete .logo {
 @-webkit-keyframes transition {
   from {
     opacity: 0;
-    to {
-      opacity: 1;
-    }
+  }
+  to {
+    opacity: 1;
   }
 }
 
 @keyframes transition {
   from {
     opacity: 0;
-    to {
-      opacity: 1;
-    }
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -325,7 +366,7 @@ header .entete .logo {
   position: absolute;
   right: 0;
   bottom: 0;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .restaurant .menuresto .img1 {
@@ -398,15 +439,34 @@ footer a i {
 
 /*Resposnsive*/
 @media screen and (min-width: 1000px) {
-  .menuresto {
-    width: 50%;
+  .restaurantbloc {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
   }
-  .footer a {
+  .restaurantbloc .menuresto {
+    width: calc(50% - 40px);
+  }
+  .restaurant h2 {
+    width: calc(100% - 40px);
+  }
+  .filtres {
+    height: auto;
+  }
+  .filtres .box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 25px;
+  }
+  .filtres .box .choix {
+    width: calc(30% - 20px);
+  }
+  footer a {
     margin: 5px auto;
   }
 }

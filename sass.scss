@@ -112,12 +112,18 @@ header {
     background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
     font-weight: bold;
     cursor: pointer;
+    &:hover {
+      box-shadow: 1px 1px 12px #aaaaaa;
+      transform: scale(1.05);
+    }
   }
 }
 /*Filtres*/
 
 .filtres {
-  height: 405px;
+  height: 380px;
+  max-width: 1200px;
+  margin: 0 auto;
   h2 {
     margin: 30px;
   }
@@ -167,8 +173,11 @@ header {
 .restaurant {
   background-color: #f6f6f6;
   h2 {
-    margin: 15px 20px;
     padding-top: 63px;
+    max-width: 1160px;
+    margin: 15px auto;
+    flex: 1;
+    padding-left: 30px;
   }
 
   .menuresto {
@@ -178,6 +187,23 @@ header {
     box-shadow: 1px 1px 15px 1px rgba(70, 70, 70, 0.3);
     position: relative;
     margin: 20px;
+    a {
+      display: block;
+    }
+    .nouveau {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: #99e2d0;
+      padding: 5px 9px;
+      border-radius: 2px;
+      animation: 1s 3s 5 both nouveau;
+      @keyframes nouveau {
+        50% {
+          opacity: 0;
+        }
+      }
+    }
 
     .descriptionimg {
       display: flex;
@@ -196,10 +222,10 @@ header {
       height: 25px;
       .fas {
         opacity: 0;
-        transition: all 0.2 linear;
+        transition: all 0.2s linear;
         background: linear-gradient(180deg, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 100%);
-        background-clip: text;
         -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         color: transparent;
         transform: scale(0.82);
         &:hover {
@@ -208,9 +234,9 @@ header {
           @keyframes transition {
             from {
               opacity: 0;
-              to {
-                opacity: 1;
-              }
+            }
+            to {
+              opacity: 1;
             }
           }
         }
@@ -221,7 +247,7 @@ header {
       position: absolute;
       right: 0;
       bottom: 0;
-      font-size: 25px;
+      font-size: 20px;
     }
 
     .img1 {
@@ -282,14 +308,33 @@ footer {
 /*Resposnsive*/
 
 @media screen and (min-width: 1000px) {
-  .menuresto {
-    width: 50%;
+  .restaurantbloc {
     display: flex;
     flex-wrap: wrap;
-  }
-  .footer {
-    a {
-      margin: 5px auto;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .menuresto {
+      width: calc(50% - 40px);
     }
+  }
+  .restaurant h2 {
+    width: calc(100% - 40px);
+  }
+
+  .filtres {
+    height: auto;
+    .box {
+      display: flex;
+      margin: 25px;
+
+      .choix {
+        width: calc(30% - 20px);
+      }
+    }
+  }
+
+  footer a {
+    margin: 5px auto;
   }
 }
