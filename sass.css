@@ -157,6 +157,7 @@ header .entete .logo {
 .presentation h1 {
   margin: 0 auto;
   padding: 20px 70px;
+  text-align: center;
 }
 
 .presentation .txtdepresentation {
